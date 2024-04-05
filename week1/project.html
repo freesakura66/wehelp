@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="Reset.css">
+    <link rel="stylesheet" href="project.css">
+
+<body>
+    <nav class="navbar">
+        <div class="Webname">My Website</div>
+        <div class="menu">
+            <div class="menu-item">menu1</div>
+            <div class="menu-item">menu2</div>
+            <div class="menu-item">menu3</div>
+            <div class="menu-item">menu4</div>
+        </div>
+        <button id="hamburger-icon" onclick="openSidebar()">☰</button>
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="sidebar-item closebtn" onclick="closeSidebar()">×</a>
+            <div class="sidebar-item">menu1</div>
+            <div class="sidebar-item">menu2</div>
+            <div class="sidebar-item">menu3</div>
+            <div class="sidebar-item">menu4</div>
+        </div>
+    </nav>
+
+    <header class="full-width">Welcome to Myhome</header>
+
+    <main>
+        <div class="mainheader">
+            <div class="grid-small-container">
+                <div class="grid-small-item">
+                    <img class="smallimg" src="image/image1.jpg" alt="">
+                    <div class="smalltext">Promotion1</div>
+                </div>
+                <div class="grid-small-item">
+                    <img class="smallimg" src="image/image1.jpg" alt="">
+                    <div class="smalltext">Promotion2</div>
+                </div>
+                <div class="grid-small-item">
+                    <img class="smallimg" src="image/image1.jpg" alt="">
+                    <div class="smalltext">Promotion3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainfooter">
+            <div class="Grid-large-container">
+                <div class="Grid-large-item biglarge">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title1</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title2</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title3</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title4</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title5</div>
+                </div>
+                <div class="Grid-large-item biglarge">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title6</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title7</div>
+                </div>
+                <div class="Grid-large-item">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title8</div>
+                </div>
+                <div class="Grid-large-item bigmid">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title9</div>
+                </div>
+                <div class="Grid-large-item bigmid">
+                    <img class="icon" src="image/icon_star.png" alt="" srcset="">
+                    <div class="bigtext">Title10</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+    <script src="project.js"></script>
+</body>
+
+</html>

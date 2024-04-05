@@ -1,0 +1,265 @@
+* {
+    font-size: 20px;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+}
+
+#hamburger-icon {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+.menu-item {
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.full-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* 使用視窗的寬度 */
+    height: 250px;
+    /* 設定高度為50px */
+    background-color: grey;
+    /* 背景色為灰色 */
+    box-sizing: border-box;
+    /* 確保邊距和內距不會影響到總寬度 */
+    font-size: 40px;
+    color: white;
+}
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainheader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-small-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px;
+    /* 两列，一列图片一列文字 */
+    gap: 20px;
+}
+
+.mainfooter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-small-item {
+    display: grid;
+    /* 嵌套的 Grid */
+    grid-template-columns: 80px auto;
+}
+
+.smallimg {
+    width: 80px;
+    height: 50px;
+    /* 图片最大宽度为父容器宽度 */
+}
+
+.smalltext {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: bisque;
+}
+
+
+.Grid-large-container {
+    margin: 10px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 5列，每列宽度相等 */
+    grid-auto-rows: 180px;
+    /* 自动行高度 */
+    gap: 20px;
+    /* 间隔 */
+}
+
+.Grid-large-item {
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    background-image: url(image/image1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.biglarge {
+    /* 跨過兩列 */
+    grid-column: span 2;
+}
+
+.icon {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+.bigtext {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background-color: rgba(255, 228, 196, 0.5);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .mainheader {
+        width: 90%;
+    }
+
+    .grid-small-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-small-item:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .mainfooter {
+        width: 90%;
+    }
+
+    .Grid-large-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .biglarge {
+        /* 跨過兩列 */
+        grid-column: span 1;
+    }
+
+    .bigmid {
+        /* 跨過兩列 */
+        grid-column: span 2;
+    }
+
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+    .mainheader {
+        width: 90%;
+    }
+
+    .grid-small-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-small-item:nth-child(3) {
+        grid-column: span 1;
+    }
+
+    .mainfooter {
+        width: 90%;
+    }
+
+    .Grid-large-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .biglarge {
+        /* 跨過兩列 */
+        grid-column: span 1;
+    }
+
+    .bigmid {
+        /* 跨過兩列 */
+        grid-column: span 1;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: block;
+        font-size: 10px;
+        cursor: pointer;
+        /* position: fixed; */
+        z-index: 1;
+    }
+
+    .sidebar {
+        display: block;
+        height: 100%;
+        /* 起始沒有在畫面上 */
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 60px;
+
+    }
+
+    .sidebar-item {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ccc;
+        display: block;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+
+
+
+}
